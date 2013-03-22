@@ -1,6 +1,6 @@
 # jquery-LiveUpdateWithSource
 
-jQuery Live Update With Source is based on this implementation of [Live Search](http://ejohn.org/apps/livesearch/), it does exactly the same, except the data to be filtered is in the form of an external JSON object.
+**jQuery Live Update With Source** is based on this implementation of [Live Search](http://ejohn.org/apps/livesearch/), it does exactly the same, except the data to be filtered is in the form of an external JSON object.
 
 
 ## Usage
@@ -13,7 +13,7 @@ $("input").liveUpdateWithSource("list", "url");
 
 - **list**: selector of the unordered list where filtered results will be shown
 
-- **url**: URL you want to send the POST request to, it expects the response to be a JSON in this format:  
+- **url**: URL you want to send the GET request to, it expects the response to be a JSON in this format:  
 
 ```js
 [{"name":"value1"}, {"name":"value2"}, {"name":"value3"}]
