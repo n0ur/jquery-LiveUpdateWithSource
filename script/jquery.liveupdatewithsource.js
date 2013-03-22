@@ -1,6 +1,6 @@
 jQuery.fn.liveUpdateWithSource = function(list, source){
 	var that = this;
-	jQuery.post(source).done(function( res ) { 
+	jQuery.get(source).done(function( res ) { 
 		list = $(list);
 		var jsonData = res, ohtml = list.html();
 

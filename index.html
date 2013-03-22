@@ -12,7 +12,7 @@
       var listId = "#posts", url = "data.json";
       
       // load all the existing data to the list (you'd probably do that server-side, and maybe cache it)
-      $.post("data.json").done(function(res) { 
+      $.get("data.json").done(function(res) { 
         $.each(res, function(i){ $(listId).append('<li>'+ res[i].name +'</li>'); });
       });
 
