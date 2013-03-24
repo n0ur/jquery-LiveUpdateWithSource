@@ -7,7 +7,7 @@
 #### Here's a [Demo](http://n0ur.github.com/jquery-LiveUpdateWithSource/)
 
 ```js
-$("input").liveUpdateWithSource("list", "url");
+$("input").liveUpdateWithSource("list", "url", max);
 ```
 - **input**: input search box, as you type things in it the results will be filtered
 
@@ -18,6 +18,7 @@ $("input").liveUpdateWithSource("list", "url");
 ```js
 [{"name":"value1"}, {"name":"value2"}, {"name":"value3"}]
 ```
+- **max**: integer to represent the maximum number of results you want to be shown (the ones with the highest scores). don't include this if you want all matched results to be shown.
 
 Simple and straight forward! 
 
