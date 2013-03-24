@@ -1,4 +1,4 @@
-jQuery.fn.liveUpdateWithSource = function(list, source){
+jQuery.fn.liveUpdateWithSource = function(list, source, max){
 	var that = this;
 	jQuery.get(source).done(function( res ) { 
 		list = $(list);
@@ -15,8 +15,10 @@ jQuery.fn.liveUpdateWithSource = function(list, source){
 					var score = this.name.toLowerCase().score(term);
 					if (score > 0) { scores.push([score, i]);}
 				});
-				jQuery.each(scores.sort(function(a, b){return b[0] - a[0];}), function(){
-					html+='<li>'+ jsonData[this[1]].name +'</li>';
+				max = max || scores.length;
+				jQuery.each(scores.sort(function(a, b){return b[0] - a[0];}), function(i){
+					if(i < max ) { html+='<li>'+ jsonData[this[1]].name +'</li>'; } 
+					else { return; }
 				});
 				list.html(html);
 			} else {

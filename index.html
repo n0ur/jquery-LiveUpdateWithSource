@@ -16,7 +16,7 @@
         $.each(res, function(i){ $(listId).append('<li>'+ res[i].name +'</li>'); });
       });
 
-      $("#q").liveUpdateWithSource(listId, url);
+      $("#q").liveUpdateWithSource(listId, url, 3);
     });
   </script>
 </head>
